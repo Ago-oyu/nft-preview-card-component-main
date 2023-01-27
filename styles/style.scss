@@ -1,0 +1,126 @@
+//CSS Reset
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}*/
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+// Style
+$clr-soft-blue: hsl(215, 51%, 70%);
+$clr-cyan: hsl(178, 100%, 50%);
+$clr-dark-blue-500: hsl(217, 54%, 11%);
+$clr-dark-blue-400: hsl(216, 50%, 16%);
+$clr-dark-blue-300: hsl(215, 32%, 27%);
+$clr-white: hsl(0, 0%, 100%);
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: $clr-dark-blue-500;
+    display: grid;
+    place-items: center;
+
+    main {
+        padding: 1.5rem;
+
+        .preview-card {
+            background-color: $clr-dark-blue-400;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            display: grid;
+            gap: 1rem;
+            //border-bottom: 3px solid $clr-dark-blue-300;
+
+            .nft__image{
+                img {
+                    border-radius: .5rem;
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+
+            .nft__info {
+                display: grid;
+                gap: 1rem;
+
+                .nft__title {
+                    color: $clr-white;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+
+                .nft__description {
+                    color: $clr-soft-blue;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                .flexbox-item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .nft__price {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        img {
+                            //display: inline-block;
+                        }
+
+                        p {
+                            //display: inline-block;
+                            color: $clr-cyan;
+                            font-weight: 600;
+                        }
+                        
+                    }
+
+                    .nft__time-left {
+                        display: flex;
+                        gap: .5rem;
+
+                        p {
+                            color: $clr-soft-blue;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                
+            }
+            .creator-info {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                img {
+                    height: 2rem;
+                    border: .125rem solid $clr-white;
+                    border-radius: 50%;
+                }
+
+                p {
+                    color: $clr-soft-blue;
+
+                    .creator-name {
+                        color: $clr-white;
+                    }
+                }
+            }   
+        }
+    }
+}

@@ -1,1 +1,92 @@
-/*# sourceMappingURL=style.css.map */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/*img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217deg, 54%, 11%);
+  display: grid;
+  place-items: center;
+}
+body main {
+  padding: 1.5rem;
+}
+body main .preview-card {
+  background-color: hsl(216deg, 50%, 16%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+body main .preview-card .nft__image img {
+  border-radius: 0.5rem;
+  display: block;
+  max-width: 100%;
+}
+body main .preview-card .nft__info {
+  display: grid;
+  gap: 1rem;
+}
+body main .preview-card .nft__info .nft__title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+body main .preview-card .nft__info .nft__description {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 1rem;
+  font-weight: 400;
+}
+body main .preview-card .nft__info .flexbox-item {
+  display: flex;
+  justify-content: space-between;
+}
+body main .preview-card .nft__info .flexbox-item .nft__price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body main .preview-card .nft__info .flexbox-item .nft__price p {
+  color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
+}
+body main .preview-card .nft__info .flexbox-item .nft__time-left {
+  display: flex;
+  gap: 0.5rem;
+}
+body main .preview-card .nft__info .flexbox-item .nft__time-left p {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 600;
+}
+body main .preview-card .creator-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body main .preview-card .creator-info img {
+  height: 2rem;
+  border: 0.125rem solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+body main .preview-card .creator-info p {
+  color: hsl(215deg, 51%, 70%);
+}
+body main .preview-card .creator-info p .creator-name {
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=style.css.map */
