@@ -24,6 +24,13 @@ body {
   display: grid;
   place-items: center;
 }
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body a:hover {
+  color: hsl(178deg, 100%, 50%);
+}
 body main {
   padding: 1.5rem;
 }
@@ -33,20 +40,48 @@ body main .preview-card {
   border-radius: 1rem;
   display: grid;
   gap: 1rem;
+  max-width: 300px;
+}
+body main .preview-card .nft__image {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+body main .preview-card .nft__image:hover .hidden {
+  display: block;
 }
 body main .preview-card .nft__image img {
-  border-radius: 0.5rem;
   display: block;
   max-width: 100%;
+  grid-area: 1/1/-1/-1;
+}
+body main .preview-card .nft__image div {
+  background-color: hsl(178deg, 100%, 50%);
+  opacity: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  grid-area: 1/1/-1/-1;
+}
+body main .preview-card .nft__image .hidden {
+  display: none;
 }
 body main .preview-card .nft__info {
   display: grid;
   gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
 }
 body main .preview-card .nft__info .nft__title {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.25rem;
   font-weight: 600;
+}
+body main .preview-card .nft__info .nft__title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 body main .preview-card .nft__info .nft__description {
   color: hsl(215deg, 51%, 70%);
@@ -69,15 +104,16 @@ body main .preview-card .nft__info .flexbox-item .nft__price p {
 body main .preview-card .nft__info .flexbox-item .nft__time-left {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 body main .preview-card .nft__info .flexbox-item .nft__time-left p {
   color: hsl(215deg, 51%, 70%);
-  font-weight: 600;
+  font-weight: 400;
 }
 body main .preview-card .creator-info {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 body main .preview-card .creator-info img {
   height: 2rem;
@@ -89,4 +125,9 @@ body main .preview-card .creator-info p {
 }
 body main .preview-card .creator-info p .creator-name {
   color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+  /*&:hover {
+      color: $clr-cyan;
+      cursor: pointer;
+  }*/
 }/*# sourceMappingURL=style.css.map */

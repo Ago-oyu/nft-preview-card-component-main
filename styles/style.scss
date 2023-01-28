@@ -34,6 +34,15 @@ body {
     display: grid;
     place-items: center;
 
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: $clr-cyan;
+        }
+    }
+
     main {
         padding: 1.5rem;
 
@@ -43,24 +52,61 @@ body {
             border-radius: 1rem;
             display: grid;
             gap: 1rem;
+            max-width: 300px;
             //border-bottom: 3px solid $clr-dark-blue-300;
 
             .nft__image{
+                border-radius: .5rem;
+                overflow: hidden;
+                //position: relative;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                &:hover {
+                        
+                    .hidden {
+                        display: block;
+                    }
+                }
+
                 img {
-                    border-radius: .5rem;
                     display: block;
                     max-width: 100%;
+                    grid-area: 1 / 1 / -1 / -1;
+
+                    
+                }
+
+                div {
+                    background-color: $clr-cyan;
+                    opacity: 50%;
+                    height: 0;
+                    padding-bottom: 100%;
+                    width: 100%;
+                    grid-area: 1 / 1 / -1 / -1
+                    
+                }
+
+                .hidden {
+                    display: none;
                 }
             }
 
             .nft__info {
                 display: grid;
                 gap: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $clr-dark-blue-300;
 
                 .nft__title {
                     color: $clr-white;
                     font-size: 1.25rem;
                     font-weight: 600;
+                }
+                .nft__title:hover {
+                    color: $clr-cyan;
+                    cursor: pointer;
+                    
                 }
 
                 .nft__description {
@@ -92,20 +138,22 @@ body {
                     .nft__time-left {
                         display: flex;
                         gap: .5rem;
+                        align-items: center;
 
                         p {
                             color: $clr-soft-blue;
-                            font-weight: 600;
+                            font-weight: 400;
                         }
                     }
                 }
 
                 
             }
+
             .creator-info {
                 display: flex;
                 align-items: center;
-                gap: .5rem;
+                gap: 1rem;
 
                 img {
                     height: 2rem;
@@ -118,9 +166,17 @@ body {
 
                     .creator-name {
                         color: $clr-white;
+                        font-weight: 300;
+
+                        /*&:hover {
+                            color: $clr-cyan;
+                            cursor: pointer;
+                        }*/
                     }
+                    
                 }
             }   
         }
     }
 }
+
